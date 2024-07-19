@@ -78,11 +78,10 @@ document.getElementById("formulario").addEventListener("submit", async (event) =
                 email: entradaEmail.value,
                 password: entradaPassword.value
             });
-            console.log("Document written with ID: ", docRef.id);
+            alert("El formulario se ha enviado con exito", docRef.id);
+            document.getElementById("formulario").reset();
         } catch (e) {
-            console.error("Error adding document: ", e);
+            alert("Error adding document:", e)
         }
-        alert("El formulario se ha enviado con exito");
-        document.getElementById("formulario").reset();
     }
 });
